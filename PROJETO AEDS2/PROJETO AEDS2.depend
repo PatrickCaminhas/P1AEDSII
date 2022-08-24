@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1661037750 source:d:\1 - ufop\2021.2\aeds 2\projeto aeds2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funcionarios.c"
+	"funcionarios.h"
+
+1661037843 d:\1 - ufop\2021.2\aeds 2\projeto aeds2\funcionarios.c
+	<stdlib.h>
+	<string.h>
+	"funcionarios.h"
+
+1661035495 d:\1 - ufop\2021.2\aeds 2\projeto aeds2\funcionarios.h
+	<stdio.h>
+
