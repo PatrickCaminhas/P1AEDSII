@@ -33,3 +33,20 @@
 1661551865 d:\1 - ufop\2021.2\aeds 2\projeto aeds2 - copia\funcionarios.h
 	<stdio.h>
 
+1661555593 source:d:\1 - ufop\2022.1\aeds 2\p1 - aeds ii - claúdio vitor dantas e patrick caminhas\p1aedsii\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funcionarios.c"
+	"funcionarios.h"
+
+1661556042 d:\1 - ufop\2022.1\aeds 2\p1 - aeds ii - claúdio vitor dantas e patrick caminhas\p1aedsii\funcionarios.c
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<stdio.h>
+	<time.h>
+	"funcionarios.h"
+
+1661551865 d:\1 - ufop\2022.1\aeds 2\p1 - aeds ii - claúdio vitor dantas e patrick caminhas\p1aedsii\funcionarios.h
+	<stdio.h>
+

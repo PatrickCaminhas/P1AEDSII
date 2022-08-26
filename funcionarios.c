@@ -61,7 +61,7 @@ void createDataBase(FILE *arq, int empQtd)
     srand(time(NULL));
     for(int i=1; i<= empQtd; i++)
     {
-            int code= rand() % 1000;
+            int code= rand() % empQtd;
         TEmployee emp;
         emp.code = code;
         sprintf(emp.name,"Funcionario %d", code);
@@ -115,7 +115,7 @@ TEmployee *sequentialSearch(int code, FILE *file, int empQtd)
 // Utilize o método de ordenação KeySorting para ordenar o arquivo contendo a base
 // de dados. Informe tempo na ordenação.
 
-// (1) Procura dentro do arquivo de funcionarios e depois salva no arquivo de chaves
+// (C1) Procura dentro do arquivo de funcionarios e depois salva no arquivo de chaves
 // o codigo de todos funcionarios e a posição correspondente deles no arquivo de funcionarios.
 void createKeys(FILE *file, FILE *fileKey, int empQtd)
 {
@@ -130,7 +130,7 @@ void createKeys(FILE *file, FILE *fileKey, int empQtd)
         saveKey(&key,fileKey);
     }
 }
-// (2)Salva no arquivo de chaves o codigo e a posição do funcionario
+// (C2)Salva no arquivo de chaves o codigo e a posição do funcionario
 void saveKey(TKey *key, FILE *out)
 {
     fwrite(&key->code, sizeof(int), 1, out);
@@ -148,7 +148,7 @@ TKey *readKey (FILE *in)
     fread(&key->position,sizeof(int),1,in);
     return key;
 }
-// Faz uma busca sequencial do usuario do codigo solicitado no arquivo de chaves e
+// (C4)Faz uma busca sequencial do usuario do codigo solicitado no arquivo de chaves e
 // com a posição dele é retornado as informações completas do funcionario.
 TEmployee *searchKey(FILE *file, FILE *fileKey, int code, int empQtd )
 {
@@ -171,7 +171,7 @@ TEmployee *searchKey(FILE *file, FILE *fileKey, int code, int empQtd )
     }
     return NULL;
 }
-
+// (C5) Imprime todas as chaves, apenas para comparação
 void printAllKeys(FILE *fileKey, int empQtd)
 {
     for(int i = 0; i <= empQtd-2; i++)
@@ -181,6 +181,9 @@ void printAllKeys(FILE *fileKey, int empQtd)
         printf("[Posicao: %d] | [Codigo: %d] \n",key->position, key->code);
     }
 }
+
+// -----------------------------------------------------------------------------------------------------------------
+
 // (D)
 // Realize a busca pelo mesmo funcionário escolhido na letra b. Utilize agora a busca
 // binária no arquivo ordenado. Informe o total de comparações feitas até encontrar o funcionário

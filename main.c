@@ -22,7 +22,7 @@ int main()
     int numberOfEmployees= 100;
     createDataBase(file,numberOfEmployees);
     TEmployee *emp;
-    createKeys(file,fileKey,99);
+    createKeys(file,fileKey,numberOfEmployees-1);
 
     int menu=0;
     int codigo;
