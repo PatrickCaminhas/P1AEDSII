@@ -16,10 +16,14 @@ char codigo;
 }TKey;
 
 void salva(TFunc *func, FILE *out);
+void salvaKey(TKey *key, FILE *out);
 TFunc *le (FILE *in);
+TKey *leKey (FILE *in);
 void cria_base_dados(FILE *arq, int nFunc);
+void cria_keys(FILE *arq, FILE *arqKey, int nFunc);
+TFunc *busca_Key(FILE *arq, FILE *arqKey, int codigo, int nFunc );
 TFunc *busca_binaria(int codigo, FILE *arq, int tamanho);
-TFunc *busca_sequencial(int codigo, FILE *arq, int tamanho)
-
+TFunc *busca_sequencial(int codigo, FILE *arq, int tamanho);
+void imprimir(TFunc * func);
 
 #endif // FUNCIONARIOS_H_INCLUDED
