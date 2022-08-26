@@ -1,15 +1,35 @@
 # depslib dependency file v1.0
-1661037750 source:d:\1 - ufop\2021.2\aeds 2\projeto aeds2\main.c
+1661549963 source:d:\1 - ufop\2021.2\aeds 2\projeto aeds2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funcionarios.c"
 	"funcionarios.h"
 
-1661037843 d:\1 - ufop\2021.2\aeds 2\projeto aeds2\funcionarios.c
+1661550055 d:\1 - ufop\2021.2\aeds 2\projeto aeds2\funcionarios.c
 	<stdlib.h>
 	<string.h>
+	<conio.h>
+	<stdio.h>
+	<time.h>
 	"funcionarios.h"
 
-1661035495 d:\1 - ufop\2021.2\aeds 2\projeto aeds2\funcionarios.h
+1661549810 d:\1 - ufop\2021.2\aeds 2\projeto aeds2\funcionarios.h
+	<stdio.h>
+
+1661553624 source:d:\1 - ufop\2021.2\aeds 2\projeto aeds2 - copia\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funcionarios.c"
+	"funcionarios.h"
+
+1661553747 d:\1 - ufop\2021.2\aeds 2\projeto aeds2 - copia\funcionarios.c
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<stdio.h>
+	<time.h>
+	"funcionarios.h"
+
+1661551865 d:\1 - ufop\2021.2\aeds 2\projeto aeds2 - copia\funcionarios.h
 	<stdio.h>
 

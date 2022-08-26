@@ -2,28 +2,30 @@
 #define FUNCIONARIOS_H_INCLUDED
 #include <stdio.h>
 
-typedef struct Funcionario{
-int codigo;
-char nome [50];
+typedef struct Employee{
+int code;
+char name [50];
 char cpf[15];
-char data_nascimento[11];
-double salario;
-} TFunc;
+char birthday[11];
+double wage;
+} TEmployee;
 
-typedef struct FuncionarioKey{
-int posicao;
-char codigo;
+typedef struct EmployeeKey{
+int position;
+char code;
 }TKey;
 
-void salva(TFunc *func, FILE *out);
-void salvaKey(TKey *key, FILE *out);
-TFunc *le (FILE *in);
-TKey *leKey (FILE *in);
-void cria_base_dados(FILE *arq, int nFunc);
-void cria_keys(FILE *arq, FILE *arqKey, int nFunc);
-TFunc *busca_Key(FILE *arq, FILE *arqKey, int codigo, int nFunc );
-TFunc *busca_binaria(int codigo, FILE *arq, int tamanho);
-TFunc *busca_sequencial(int codigo, FILE *arq, int tamanho);
-void imprimir(TFunc * func);
+void save(TEmployee *emp, FILE *out);
+void saveKey(TKey *key, FILE *out);
+TEmployee *read (FILE *in);
+TKey *readKey (FILE *in);
+void createDataBase(FILE *file, int nFunc);
+void createKeys(FILE *file, FILE *fileKey, int empQtd);
+TEmployee *searchKey(FILE *file, FILE *fileKey, int codigo, int empQtd );
+TEmployee *binarySearch(int code, FILE *file, int empQtd);
+TEmployee *sequentialSearch(int code, FILE *file, int empQtd);
+void printEmployee(TEmployee * emp);
+void insertionSort(FILE *file, int empQtd);
+int registerSize();
 
 #endif // FUNCIONARIOS_H_INCLUDED

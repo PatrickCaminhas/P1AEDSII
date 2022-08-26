@@ -6,31 +6,81 @@
 int main()
 {
 
-    FILE *arq = fopen("funcionarios.dat", "wb+");
-    FILE *arqKey = fopen("funcionariosKeys.dat", "wb+");
-    if(arq==NULL)
+    FILE *file = fopen("funcionarios.dat", "wb+");
+    FILE *fileKey = fopen("funcionariosKeys.dat", "wb+");
+    if(file==NULL)
     {
-        printf("Não foi possivel abrir o arquivo! \n");
+        printf("Nao foi possivel abrir o arquivo! \n");
         return 1;
     }
-    if(arqKey==NULL)
+    if(fileKey==NULL)
     {
-        printf("Não foi possivel abrir o arquivo! \n");
+        printf("Nao foi possivel abrir o arquivo! \n");
         return 1;
     }
-    int nFunc= 100;
-    cria_base_dados(arq,nFunc);
 
-    TFunc *func = busca_sequencial(2,arq,nFunc);
-    imprimir(func);
-    func = busca_binaria(2,arq,nFunc);
-    imprimir(func);
-    cria_keys(arq,arqKey,99);
+    int numberOfEmployees= 100;
+    createDataBase(file,numberOfEmployees);
+    TEmployee *emp;
+    createKeys(file,fileKey,99);
 
-    func = busca_Key(arq,arqKey,2,99);
+    int menu=0;
+    int codigo;
+    do
+    {
+        printf("                                               [MENU]\n");
+        printf("1 - Busca Sequencial | 2 - Busca pela Chave | 3 - Busca Binaria | 4 - Imprimir todas as chaves | 5 - Sair");
+        printf("\nOpcao selecionada: ");
+        scanf("%d", &menu);
+        switch(menu)
+        {
+        case 1:
+            printf("Codigo do funcionario a ser procurado: ");
+            scanf("%d", &codigo);
+            emp = sequentialSearch(codigo,file,numberOfEmployees);
+            printEmployee(emp);
+            system("pause");
+            system("cls");
+            break;
+        case 2:
+            printf("Codigo do funcionario a ser procurado: ");
+            scanf("%d", &codigo);
+            emp = searchKey(file,fileKey,codigo,99);
+            printEmployee(emp);
+            system("pause");
+            system("cls");
+            break;
+        case 3:
+            printf("Codigo do funcionario a ser procurado: ");
+            scanf("%d", &codigo);
+            emp = binarySearch(codigo,file,numberOfEmployees);
+            printEmployee(emp);
+            system("pause");
+            system("cls");
+            break;
+        case 4:
+            printAllKeys(fileKey,numberOfEmployees);
+            system("pause");
+            system("cls");
+            break;
+        case 5:
+            printf("Saindo...");
+            break;
 
-    imprimir(func);
-    free(func);
-    fclose(arq);
+        default:
+            printf("\nOpcao invalida");
+        }
+
+    }
+    while(menu!=5);
+
+
+
+
+
+
+    free(emp);
+    fclose(file);
+    fclose(fileKey);
     return 0;
 }
