@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1663045287 source:d:\1 - ufop\2022.1\aeds 2\prova 1 - v2\prova\main.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<time.h>
+

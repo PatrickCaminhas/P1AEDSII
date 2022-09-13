@@ -1,3 +1,0 @@
-D:/1 - UFOP/2021.2/AEDS 2/PROJETO AEDS2/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/1 - UFOP/2021.2/AEDS 2/PROJETO AEDS2/cmake-build-debug/CMakeFiles/PROJETO_AEDS2.dir
-D:/1 - UFOP/2021.2/AEDS 2/PROJETO AEDS2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
